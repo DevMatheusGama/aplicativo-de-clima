@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
+import DadosClima, { type DadosType } from "./components/DadosClima/DadosClima";
 
 function App() {
   const [cityName, setCityName] = useState<string>('')
-  const [dataApi, setDataApi] = useState<null>(null)
+  const [dataApi, setDataApi] = useState<DadosType | null>(null)
 
   async function handleSearch() {
-    
     if (!cityName) {
       alert("Digite o nome de uma cidade!");
       return;
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-      <div className="flex items-center justify-center flex-col border m-5 p-5 bg-white/20">
+      <div className="flex items-center justify-center flex-col rounded-lg m-5 p-5 bg-white/20">
         <header className="flex items-center justify-center w-full relative">
           <div className="flex items-center justify-center gap-3 w-96">
             <div className="flex items-center gap-2 w-80 h-11 border rounded-sm pl-2 ">
@@ -47,6 +47,7 @@ function App() {
             </button>
           </div>
         </header>
+        {dataApi && <DadosClima {...dataApi} />}
       </div>
     </div>
   )
