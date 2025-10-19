@@ -24,9 +24,9 @@ function DadosClima({ name, main, weather, wind }: DadosType) {
             <img
                 src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
                 alt={weather[0].description}
-                className="text-9xl"
+                className="w-50 h-30 "
             />
-            <h2 className="font-mono">{Math.round(main.temp)}°C</h2>
+            <h2 className="font-sans text-6xl">{Math.round(main.temp)}°C</h2>
             <p>{name}</p>
             <div className="flex ">
                 <div className="flex">
