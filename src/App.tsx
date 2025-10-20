@@ -23,6 +23,7 @@ function App() {
 
       const response = await fetch(apiUrl)
       const data = await response.json()
+      console.log(data)
 
       if (data.cod === 200) {
         setDataApi(data);
@@ -42,8 +43,8 @@ function App() {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-      <div className="flex items-center justify-center flex-col rounded-lg m-5 p-5 bg-white/20">
-        <header className="flex items-center justify-center w-full relative">
+      <div className="flex items-center justify-center flex-col rounded-lg m-5 p-5 bg-black/15">
+        <header className="flex items-center justify-center w-full ">
           <div className="flex items-center justify-center gap-3 w-96">
             <div className="flex items-center gap-2 w-80 h-11 border rounded-sm pl-2 ">
               <span className=""><FaMapMarkerAlt className="text-lg text-gray-800" /></span>
