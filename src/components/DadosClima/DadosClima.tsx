@@ -36,7 +36,7 @@ function DadosClima({ name, main, weather, wind, sys }: DadosType) {
 
             <div className="flex flex-col lg:flex-row gap-4 w-full items-stretch justify-center">
 
-                <div className="flex flex-col items-center justify-between gap-2 w-full lg:w-[40%] border-1 rounded-2xl bg-white/10 p-4 h-full">
+                <div className="flex flex-col items-center justify-between gap-2 w-full lg:w-[40%] border-1 rounded-2xl bg-white/20 p-4 h-full">
                     <img
                         src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
                         alt={weather[0].description}
@@ -49,22 +49,22 @@ function DadosClima({ name, main, weather, wind, sys }: DadosType) {
                     <p className="text-lg font-bold text-center">{name}, {sys.country}</p>
                 </div>
 
-                <div className="flex flex-col justify-between gap-2 w-full lg:w-[60%] font-mono h-full">
-                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/10">
+                <div className="flex flex-col gap-2 w-full lg:w-[60%] lg:gap-5 font-mono h-full">
+                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/20 lg:h-20">
                         <WiThermometer className="text-orange-400 text-2xl" />
                         <div>
-                            <p className="font-bold text-lg">Temp. max:</p>
-                            <p className="font-semibold">{main.temp_max}°C</p>
+                            <p className="flex items-center gap-2 font-medium">Temp. max:</p>
+                            <p className="flex items-center gap-2 font-medium">{main.temp_max}°C</p>
                         </div>
                     </div>
-                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/10">
+                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/20 lg:h-20">
                         <WiThermometerExterior className="text-blue-400 text-2xl" />
                         <div>
-                            <p className="font-bold text-lg">Temp. min:</p>
-                            <p className="font-semibold">{main.temp_min}°C</p>
+                            <p className="flex items-center gap-2 font-medium">Temp. min:</p>
+                            <p className="flex items-center gap-2 font-medium">{main.temp_min}°C</p>
                         </div>
                     </div>
-                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/10">
+                    <div className="flex items-center w-full gap-2 border-1 rounded-2xl p-2 bg-white/20 lg:h-20">
                         <div className="flex flex-col gap-1">
                             <p className="flex items-center gap-2 font-medium">
                                 <WiSunrise className="text-yellow-400 text-3xl" />
@@ -80,14 +80,14 @@ function DadosClima({ name, main, weather, wind, sys }: DadosType) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full">
-                <div className="flex items-center justify-center gap-3 flex-[0.4] border-1 p-4 rounded-2xl bg-white/10">
+                <div className="flex items-center justify-center gap-3 flex-[0.4] border-1 p-4 rounded-2xl bg-white/20">
                     <FaTint className="text-blue-500 text-5xl" />
                     <div className="text-center">
                         <p className="font-bold text-lg">{main.humidity}%</p>
                         <p className="font-semibold">Umidade</p>
                     </div>
                 </div>
-                <div className="flex items-center justify-center gap-3 flex-[0.6] border-1 p-4 rounded-2xl bg-white/10">
+                <div className="flex items-center justify-center gap-3 flex-[0.6] border-1 p-4 rounded-2xl bg-white/20">
                     <WiStrongWind className="text-gray-600 text-6xl" />
                     <div className="text-center">
                         <p className="font-bold text-lg">{wind.speed} KM/H</p>

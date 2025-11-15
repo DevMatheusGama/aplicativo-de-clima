@@ -42,7 +42,7 @@ function App() {
   }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+    <div className="w-full h-screen flex items-center justify-center bg-gray-300">
       <div className="flex items-center justify-center flex-col rounded-lg m-5 p-4 sm:p-6 bg-black/15 w-[95%] sm:w-auto">
         <header className="flex w-full px-2">
           <div className="flex gap-3 w-full">
