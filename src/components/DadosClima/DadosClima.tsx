@@ -45,7 +45,7 @@ function DadosClima({ name, main, weather, wind, sys }: DadosType) {
                         {weather[0].description}
                     </p>
 
-                    <h2 className="font-sans text-5xl md:text-6xl font-semibold text-center">
+                    <h2 className="font-sans text-5xl md:text-4xl font-semibold text-center">
                         {Math.round(main.temp)}°C
                     </h2>
 
@@ -53,7 +53,7 @@ function DadosClima({ name, main, weather, wind, sys }: DadosType) {
                         {name}, {sys.country}
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 w-full lg:w-[60%] lg:gap-8 font-mono h-full">
+                <div className="grid grid-cols-1 gap-4 w-full lg:w-[60%] lg:gap-5 lg:pt-1 font-mono h-full">
                     <div className="flex items-center gap-3 border rounded-2xl p-3 bg-white/20 h-auto md:h-20">
                         <WiThermometer className="text-orange-400 text-3xl" />
                         <div>
